@@ -212,7 +212,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)),
-    url(../img/20191226_143010.jpg) center -8rem/contain fixed no-repeat;
+    url(../img/zoomi.webp) center -8rem/contain fixed no-repeat;
 }
 
 .intro-label{
@@ -403,7 +403,7 @@ body {
     }
     .banner {
         background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)),
-        url(../img/20191226_143010.jpg) center -32rem / cover fixed no-repeat;
+        url(../img/zoomi.webp) center -32rem / cover fixed no-repeat;
     }
     html{
         font-size: 50%;/* 10/16 * 100 */
