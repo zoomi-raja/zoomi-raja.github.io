@@ -371,6 +371,10 @@ body {
     .banner{
         height: 37vh;
     }
+    .intro-label{
+        font-size: 3rem;
+        font-weight: 500;
+    }
     .introduction{
         flex-direction: column;
     }
@@ -389,8 +393,12 @@ body {
     }
 }
 @media screen and (max-width: 576px) {
+    .intro-value {
+        min-width: initial;
+    }
     .banner {
-        background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)), url(../img/20191226_143010.jpg) center -8rem / cover fixed no-repeat;
+        background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)),
+        url(../img/20191226_143010.jpg) center -32rem / cover fixed no-repeat;
     }
     html{
         font-size: 50%;/* 10/16 * 100 */
