@@ -6,9 +6,9 @@
     --color-text-2: #C0C0C0;
     --banner-overlay-top: rgba(0, 0, 0, 0.9);
     --banner-overlay-bottom: rgba(0, 0, 0, 0.6);
-    
+    --background-color: #0f0f0f;
+    --shadow-light: 0 2rem 3rem rgba(255, 255, 255,.06);
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-    --shadow-light: 0 2rem 3rem rgba(0,0,0,.06);
     --line: 2px solid var(--color-text-2);
 }
 
@@ -19,6 +19,8 @@
     --color-text-2: #4A4A4A;
     --banner-overlay-top: rgba(255, 255, 255, 0.9);
     --banner-overlay-bottom: rgba(255, 255, 255, 0.6);
+    --background-color: #f5f4f4;
+    --shadow-light: 0 2rem 3rem rgba(0,0,0,.06);
 }
 
 /* default reset */
@@ -53,26 +55,71 @@ body {
     border-top-right-radius: 2rem;
 }
 
+.heading-border {
+    width: 8rem;
+    height: .4rem;
+    background: var(--color-primary);
+    margin: 0 auto;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    display: inline-block;
+    color: var(--color-primary);
+    text-decoration: none;
+    border: 1px solid var(--color-primary);
+    padding: 2rem;
+    transition: all .2s;
+}
+.btn:hover{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.link{
+    text-decoration: none;
+    border: none;
+    color: var(--color-primary);
+    /* font-size: inherit; */
+    border-bottom: 1px solid currentColor;
+    padding-bottom: .2rem;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+}
+.link span{
+    margin-left: .3rem;
+    transition: margin-left .2s;
+}
+.link:hover span{
+    margin-left: .8rem;
+}
+
 /* header nav */
+.header{
+    border-bottom: var(--line);
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: var(--line);
-    padding:1rem 6rem;
+    padding:1.8rem 6rem;
 }
 
 .nav .logo{
     background-color: var(--color-primary);
     color: var(--color-secondary);
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.5rem;
     border-radius: 50%;
     display: inline-block;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
     position: relative;
     transition: all .2s;
     overflow: hidden;
@@ -123,7 +170,7 @@ body {
     bottom: 0;
     background-color: var(--color-primary);
     transition: 0.4s;
-    border-radius: 34px;
+    border-radius: 3.4rem;
 }
 
 .nav .slider:before {
@@ -148,17 +195,17 @@ body {
 }
 
 .banner{
-    height: 60vh;
+    height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)),
-    url(../img/20191226_143010.jpg) center center/contain fixed;
+    url(../img/20191226_143010.jpg) center -8rem/contain fixed;
 }
 
 .intro-label{
-    font-size: 6rem;
-    font-weight: 700;
+    font-size: 5rem;
+    font-weight: 500;
 }
 .intro-label > span:first-child{
     display: block;
@@ -184,7 +231,68 @@ body {
     50% { border-color: var(--color-primary); }
 }
 
-.main{
-    background-color: pink;
-    height: 100vh;
+/* introduction */
+.introduction{
+    background-color: var(--background-color);
+    display: flex;
+    font-size: 1.4rem;
+    padding: 4.5rem;
+    line-height: 1.6;
+}
+.summary{
+    background-color: var(--color-secondary);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    font-size: 1.8rem;
+    box-shadow: var(--shadow-light);
+}
+.summary > h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.understanding{
+    text-align: center;
+}
+
+.understanding .btn-panel{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.understanding .section{
+    padding: 3rem;
+    background-color: var(--color-secondary);
+    margin-bottom: 4.5rem;
+    box-shadow: var(--shadow-light);
+}
+
+.understanding .skills{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: left;
+}
+.understanding .skills .skill-item{
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+}
+.understanding .skills .skill-item::before{
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: .7rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/triangle-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/triangle-right.svg);
+    mask-size: cover;
+}
+
+.fav-books .heading-border{
+    margin-bottom: 2rem;
 }
