@@ -47,4 +47,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     type();
+    // stick top bar
+    const topBar = document.querySelector('.nav');
+    const stickyOffset = topBar.offsetTop;
+
+    function checkSticky() {
+        if ((window.scrollY || window.pageYOffSet) >= stickyOffset) {
+            topBar.classList.add('sticky');
+        } else {
+            topBar.classList.remove('sticky');
+        }
+    }
+
+    window.addEventListener('scroll', checkSticky);
 });

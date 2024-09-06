@@ -33,6 +33,7 @@
 }
 
 html{
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: 62.5%;/* 10/16 * 100 */
 }
@@ -124,6 +125,7 @@ body {
     transition: all .2s;
     overflow: hidden;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .nav .logo .logo-text{
@@ -200,7 +202,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)),
-    url(../img/20191226_143010.jpg) center -8rem/contain fixed;
+    url(../img/20191226_143010.jpg) center -8rem/contain fixed no-repeat;
 }
 
 .intro-label{
@@ -230,7 +232,12 @@ body {
     from, to { border-color: transparent; }
     50% { border-color: var(--color-primary); }
 }
-
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 120rem;
+    z-index: 1000;
+}
 /* introduction */
 .introduction{
     background-color: var(--background-color);
