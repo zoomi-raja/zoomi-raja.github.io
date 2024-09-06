@@ -65,6 +65,13 @@ body {
     margin-bottom: 1rem;
 }
 
+.heading-text{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
 .btn{
     display: inline-block;
     color: var(--color-primary);
@@ -241,12 +248,16 @@ body {
     background-color: var(--banner-overlay-top);
 }
 /* introduction */
-.introduction{
+.main{    
     background-color: var(--background-color);
-    display: flex;
-    font-size: 1.4rem;
     padding: 4.5rem;
+    font-size: 1.4rem;
+}
+
+.introduction{
+    display: flex;
     line-height: 1.6;
+    margin-bottom: 4.5rem;
 }
 .introduction .summary{
     background-color: var(--color-secondary);
@@ -274,13 +285,6 @@ body {
 
 .social-icons .social-link:nth-of-type(2) .icon{
     fill: red;
-}
-
-.introduction .summary .intro > h2{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
 }
 
 .introduction .understanding{
@@ -324,4 +328,27 @@ body {
 
 .fav-books .heading-border{
     margin-bottom: 2rem;
+}
+
+/* articles */
+.JavaScript .articles{
+    display: flex;
+    gap: 4.5rem;
+}
+
+.JavaScript .articles .article{
+    background-color: var(--color-secondary);
+    padding: 3rem;
+    box-shadow: var(--shadow-light);
+    line-height: 1.4;
+}
+.JavaScript .articles .article .title{
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+.footer{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 3rem;
 }
