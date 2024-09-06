@@ -368,6 +368,9 @@ body {
     }
 }
 @media screen and (max-width: 768px) {
+    .banner{
+        height: 37vh;
+    }
     .introduction{
         flex-direction: column;
     }
@@ -386,6 +389,9 @@ body {
     }
 }
 @media screen and (max-width: 576px) {
+    .banner {
+        background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)), url(../img/20191226_143010.jpg) center -8rem / cover fixed no-repeat;
+    }
     html{
         font-size: 50%;/* 10/16 * 100 */
     }
