@@ -334,6 +334,7 @@ body {
 .JavaScript .articles{
     display: flex;
     gap: 4.5rem;
+    margin-top: 3rem;
 }
 
 .JavaScript .articles .article{
@@ -351,4 +352,41 @@ body {
     font-weight: 600;
     font-size: 1.5rem;
     padding: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .introduction .understanding .btn-panel{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .JavaScript .articles {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
+    .introduction{
+        flex-direction: column;
+    }
+    .introduction .summary{
+        margin-right: 0;
+        margin-bottom: 4.5rem;
+    }
+    .introduction .summary .intro{
+        margin-bottom: 3rem;
+    }
+    .JavaScript .articles p{
+        line-height: 2;
+    }
+    .intro-value {
+        min-width: 46rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    html{
+        font-size: 50%;/* 10/16 * 100 */
+    }
 }
