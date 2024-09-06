@@ -107,6 +107,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: var(--line);
+    background-color: var(--color-secondary);
     padding:1.8rem 6rem;
 }
 
@@ -237,6 +238,7 @@ body {
     top: 0;
     width: 120rem;
     z-index: 1000;
+    background-color: var(--banner-overlay-top);
 }
 /* introduction */
 .introduction{
@@ -246,26 +248,46 @@ body {
     padding: 4.5rem;
     line-height: 1.6;
 }
-.summary{
+.introduction .summary{
     background-color: var(--color-secondary);
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
     font-size: 1.8rem;
     box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.summary > h2{
+
+.introduction .summary .social-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.introduction .summary .social-icons .icon{
+    height: 5rem;
+    width: 5em;
+    fill: var(--color-text-2);
+}
+
+.social-icons .social-link:nth-of-type(2) .icon{
+    fill: red;
+}
+
+.introduction .summary .intro > h2{
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-.understanding{
+.introduction .understanding{
     text-align: center;
 }
 
-.understanding .btn-panel{
+.introduction .understanding .btn-panel{
     display: flex;
     align-items: center;
     gap: 1rem;
