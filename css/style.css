@@ -398,12 +398,16 @@ body {
     }
 }
 @media screen and (max-width: 576px) {
+    .intro-label{
+        padding: 30% 8rem 0;
+    }
     .intro-value {
         min-width: initial;
     }
     .banner {
         background: linear-gradient(var(--banner-overlay-top), var(--banner-overlay-bottom)),
         url(../img/zoomi.webp) center -32rem / cover fixed no-repeat;
+        display: block;
     }
     html{
         font-size: 50%;/* 10/16 * 100 */
