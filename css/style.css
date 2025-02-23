@@ -294,7 +294,7 @@ body {
 .introduction .summary .social-icons .icon {
   height: 5rem;
   width: 5em;
-  fill: var(--color-text-2);
+  fill: var(--color-text);
 }
 
 .social-icons .social-link:nth-of-type(2) .icon {
