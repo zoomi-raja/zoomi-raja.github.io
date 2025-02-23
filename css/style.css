@@ -4,7 +4,7 @@
   --color-secondary: #0a0a0a;
   --color-text: #4a4a4a;
   --color-text-2: #0f0f0f;
-  --banner-overlay-top: rgba(0, 0, 0, 0.9);
+  --banner-overlay-top: rgba(0, 0, 0, 0.99);
   --banner-overlay-bottom: rgba(0, 0, 0, 0.6);
   --background-color: #0f0f0f;
   --shadow-light: 0 0.2rem 1rem rgba(255, 255, 255, 0.06);
@@ -17,7 +17,7 @@
   --color-secondary: #f8f8f8;
   --color-text: #c0c0c0;
   --color-text-2: #749ec9;
-  --banner-overlay-top: rgba(255, 255, 255, 0.9);
+  --banner-overlay-top: rgba(255, 255, 255, 0.99);
   --banner-overlay-bottom: rgba(255, 255, 255, 0.6);
   --background-color: #f5f4f4;
   --shadow-light: 0 0.2rem 1rem rgba(0, 0, 0, 0.06);
@@ -212,10 +212,11 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(
-      var(--banner-overlay-top),
+      to right,
+      var(--banner-overlay-top) 30%,
       var(--banner-overlay-bottom)
     ),
-    url(../img/zoomi.webp) center -8rem / contain fixed no-repeat;
+    url(../img/zoomi.webp) right center / cover no-repeat;
 }
 
 .intro-label {
@@ -422,11 +423,6 @@ body {
     min-width: initial;
   }
   .banner {
-    background: linear-gradient(
-        var(--banner-overlay-top),
-        var(--banner-overlay-bottom)
-      ),
-      url(../img/zoomi.webp) center -32rem / cover fixed no-repeat;
     display: block;
   }
   html {
